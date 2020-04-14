@@ -1,5 +1,19 @@
 .App {
   text-align: center;
+
+}
+
+
+h1 {
+  text-align: center;
+  padding-top: 20px;
+}
+img {
+  border-radius: .5em;
+}
+
+.app-container {
+  background-color: darkgray;
 }
 
 .App-logo {
@@ -34,5 +48,57 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.follower-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 800px;
+  background-color: cadetblue;
+  margin: 0 auto;
+  border-radius: 1em;
+}
+
+.follower-card {
+  border: 1px solid black;
+  margin: 1em;
+  padding: 2em;
+  text-align: center;
+}
+
+.user-container {
+  background-color: darkgoldenrod;
+  width: 800px;
+  display: flex;
+  margin: 0 auto;
+  border-radius: 1em;
+  margin-bottom: 2em;
+}
+
+.user-card {
+  margin: 0 auto;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin-bottom: 1em;
+}
+
+.user-card p {
+  text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+  .follower-container {
+    width: 95%;
+  }
+  .follower-card {
+    margin: 20px;
+    padding: 5px;
+  }
+  .user-container {
+    width: 95%;
+  }
+  .user-card img {
+    width: 400px;
   }
 }

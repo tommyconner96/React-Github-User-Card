@@ -24,17 +24,24 @@ class UserCard extends React.Component {
 
     render(){
         return(
-            <div>
-                <div>
-                    <img src={this.props.user.avatar_url}  />
+            <div className='app-container'>
+                <h1>Github User Card!</h1>
+                <div className='user-container'>
+                <div className='user-card'>
+                    <img src={this.props.user.avatar_url} alt='github user' />
                     <p>{this.props.user.name}</p>
                     <p>{this.props.user.login}</p>
                     <p>{this.props.user.location}</p>
                     <p>{this.props.user.public_repos} repos</p>
                 </div>
-                <div>
+                </div>
+                <div className='follower-container'>
                     {this.state.followers.map(followers => 
-                        <div>{followers.login}</div>)}
+                        <div className='follower-card'>
+                            <img src={followers.avatar_url} alt='github user' width='150px' height='150px' />
+                            <br />
+                            {followers.login}
+                            </div>)}
                 </div>
             </div>
         )
